@@ -1,0 +1,58 @@
+//mixins
+
+@mixin border-radius($radius) {
+    -webkit-border-radius:#{$radius};
+    -moz-border-radius:#{$radius};
+        border-radius:#{$radius};
+}
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+@mixin widthHeight($width, $height){
+    width:#{$width};
+    height:#{$height};
+}
+@mixin position($bottom,$right){
+    position: absolute;
+    bottom:#{$bottom}px;
+    right:#{$right}px;
+}
+@mixin MQ($arg){
+    @media screen and (max-width:$arg){
+        @content;
+    }
+}
+@mixin MediaQ($arg1, $arg2){
+    @media screen and (min-width:$arg1) and(max-width:$arg2){
+        @content;
+    }
+}
+

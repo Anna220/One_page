@@ -1,0 +1,43 @@
+.footer{
+    width:80%;
+    margin:0 auto;
+    position:relative;
+    @include MQ(620px){
+         width:97%;
+    }
+
+ .sprites_media{
+    background: url('../img/sprites_spolecznosciowe.png');
+    @include widthHeight(43px,43px);
+}
+    .facebook{
+    background-position: 0px -1px;
+    @include transition(all 0.25s linear);
+    @include position(0,150);
+    &:hover{
+        background-position: 0px -43px;}
+    
+}
+.twitter{
+    background-position: -52px -1px;
+    @include transition(all 0.25s linear);
+    @include position(0,108);
+    &:hover{
+        background-position: -52px -43px;}
+    
+}
+.youtube{
+    background-position: -104px -1px;
+    @include transition(all 0.25s linear);
+    @include position(0,67);   
+    &:hover{
+    background-position: -104px -43px;}
+}
+.in{
+    background-position: -155px -1px;
+    @include transition(all 0.25s linear);
+    @include position(0,28);  
+    &:hover{
+        background-position: -155px -43px;}
+    }
+}

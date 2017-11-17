@@ -1,0 +1,76 @@
+#przeslona{
+    @include widthHeight(100%,100%);
+    background-color:rgba(36, 32, 32, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:1;
+}
+header{
+    @include widthHeight(100%,100vh);
+    background: red url('../img/header.jpeg') center/cover no-repeat;
+    color:$white;
+    line-height:$lh;
+    position:relative;
+    @include MQ(620px){
+        height:25vh;
+    }
+    %groupSelector{
+    width:100%;
+    position:absolute; 
+    z-index:2;
+    text-align:center;
+    letter-spacing: $lsHead;
+    word-spacing: $wsHead;
+    }
+    
+    h1{
+        @extend %groupSelector;
+        top:25%;
+        font-size:$font-size*4;
+        text-transform: uppercase;
+        letter-spacing: $lsHead+1;
+        @include MQ(620px){
+            font-size:$font-size*2.2;
+            letter-spacing:$lsHead+1;
+        }
+    }
+    p{
+        @extend %groupSelector;
+        top:40%;
+        font-size:$font-size*2;
+        line-height:$lh+0.5;
+        @include MQ(620px){
+            display:none;
+        }
+    }
+    .przycisk{
+        @extend %groupSelector;
+        border:1px solid #fff;
+        @include border-radius(4px);
+        background:linear-gradient(#242858, #a6abce);
+        top: 60%;
+        right:0;
+        left:0;
+        margin:0 auto; 
+        width:200px;
+        display:block;
+        padding:1.5rem;
+        font-size:$font-size *1.8;
+        @include transition(all 1s ease 0s);
+        @include box-shadow(0px,0px,15px,2.5px,$white);
+        @include MQ(620px){
+            display:none;
+        }
+        @include MediaQ(621px, 1000px){
+                   position: absolute;
+                   top:470px; 
+                }
+        &:hover{
+    
+        background-color:#6060e8; 
+        @include box-shadow(0px,0px,10px,2.5px,$white);
+            
+    }
+}
+}
